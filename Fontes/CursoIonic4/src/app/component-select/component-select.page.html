@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Select</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Select Simples</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Sexo</ion-label>
+        <ion-select placeholder="Selecione Sexo">
+          <ion-select-option value="M">Masculino</ion-select-option>
+          <ion-select-option value="F">Feminino</ion-select-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-label>Cor</ion-label>
+        <ion-select placeholder="Selecione" okText="Ok" cancelText="Cancelar">
+          <ion-select-option value="pink">Pink</ion-select-option>
+          <ion-select-option value="blue">Blue</ion-select-option>
+          <ion-select-option selected value="green">Green</ion-select-option>
+          <ion-select-option value="black">Black</ion-select-option>
+          <ion-select-option value="orange">Orange</ion-select-option>
+        </ion-select>
+    </ion-item>
+    <ion-list-header>
+      <ion-label>Select Multiplo</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Frutas</ion-label>
+      <ion-select multiple="true" placeholder="Selecione" okText="Selecionar" cancelText="Cancelar">
+        <ion-select-option value="pineapple">Pineapple</ion-select-option>
+        <ion-select-option value="apple">Apple</ion-select-option>
+        <ion-select-option selected value="strawberry">Strawberry</ion-select-option>
+        <ion-select-option value="grape">Grape</ion-select-option>
+        <ion-select-option value="orange">Orange</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-list-header>
+      <ion-label>Select Customizado</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Alerta</ion-label>
+      <ion-select [interfaceOptions]="customAlertOptions" interface="alert" placeholder="Selecione" okText="Selecionar" cancelText="Cancelar">
+        <ion-select-option value="pineapple">Pineapple</ion-select-option>
+        <ion-select-option value="apple">Apple</ion-select-option>
+        <ion-select-option selected value="strawberry">Strawberry</ion-select-option>
+        <ion-select-option value="grape">Grape</ion-select-option>
+        <ion-select-option value="orange">Orange</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Popover</ion-label>
+      <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Selecione" okText="Selecionar" cancelText="Cancelar">
+        <ion-select-option value="brown">Brown</ion-select-option>
+        <ion-select-option value="blonde">Blonde</ion-select-option>
+        <ion-select-option selected value="black">Black</ion-select-option>
+        <ion-select-option value="red">Red</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Action Sheet</ion-label>
+      <ion-select [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="Selecione" okText="Selecionar" cancelText="Cancelar">
+        <ion-select-option value="red">Red</ion-select-option>
+        <ion-select-option value="purple">Purple</ion-select-option>
+        <ion-select-option selected value="yellow">Yellow</ion-select-option>
+        <ion-select-option value="orange">Orange</ion-select-option>
+        <ion-select-option value="green">Green</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+</ion-content>

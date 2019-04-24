@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Radio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>  
+    <ion-radio-group>
+      <ion-list-header>
+        <ion-label>Frutas</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>Morango</ion-label>
+        <ion-radio slot="start" value="morango"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Maçã</ion-label>
+        <ion-radio slot="start" value="maca"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Banana</ion-label>
+        <ion-radio slot="start" value="banana" color="light"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Pêra</ion-label>
+        <ion-radio slot="start" value="pera" checked="true" disabled="true"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+</ion-content>
