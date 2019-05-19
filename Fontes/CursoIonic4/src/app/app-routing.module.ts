@@ -40,6 +40,7 @@ const routes: Routes = [
   { path: 'component-toggle', loadChildren: './component-toggle/component-toggle.module#ComponentTogglePageModule' },
   { path: 'api-externa', loadChildren: './api-externa/api-externa.module#ApiExternaPageModule' },
   { path: 'animacoes', loadChildren: './animacoes/animacoes.module#AnimacoesPageModule' },
+  { path: 'api-page-interno', loadChildren: './api-page-interno/api-page-interno.module#ApiPageInternoPageModule' },
 ];
 
 @NgModule({

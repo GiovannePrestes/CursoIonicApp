@@ -1,3 +1,4 @@
+import { ApiPageInternoPage } from './../api-page-interno/api-page-interno.page';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -21,6 +22,7 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [ApiExternaPage]
+  declarations: [ApiExternaPage, ApiPageInternoPage],
+  entryComponents: [ApiPageInternoPage]
 })
 export class ApiExternaPageModule {}

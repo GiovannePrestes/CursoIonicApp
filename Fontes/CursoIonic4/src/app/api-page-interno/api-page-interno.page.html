@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Informação CEP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label>Cep:</ion-label>
+      {{cepJson}}
+    </ion-item>
+    <ion-item>
+      <ion-label>UF:</ion-label>
+      {{uf}}
+    </ion-item>
+    <ion-item>
+      <ion-label>Cidade:</ion-label>
+      {{cidade}}
+    </ion-item>
+    <ion-item>
+      <ion-label>Bairro:</ion-label>
+      {{bairro}}
+    </ion-item>
+    <ion-item>
+      <ion-label>Logradouro:</ion-label>
+      {{logradouro}}
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" (click)="closeModal()">Voltar</ion-button>
+</ion-content>

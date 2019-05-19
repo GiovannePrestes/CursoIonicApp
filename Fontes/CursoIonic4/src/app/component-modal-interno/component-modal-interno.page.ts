@@ -7,27 +7,26 @@ import { NavParams, AlertController, ModalController } from '@ionic/angular';
   styleUrls: ['./component-modal-interno.page.scss'],
 })
 export class ComponentModalInternoPage implements OnInit {
+  
+  constructor(private navParam : NavParams, private alertCtrl : AlertController, private modalCtrl : ModalController) { }
 
-  constructor(private navParam: NavParams, private alertCtrl: AlertController, private modalCtrl: ModalController) { }
-
-  ngOnInit() {
-    this.alertaMessage();
-  }
-
-  async alertaMessage(){
-    let idade = this.navParam.get('idade');
+  async ngOnInit() {
     let nome = this.navParam.get('nome');
+    let idade = this.navParam.get('idade');
 
     let alerta = await this.alertCtrl.create({
-      header: 'Bem Vindo',
-      message:  nome + ' Voce esta no modal interno com ' + idade + ' anos'
+      header: 'Enviando parametros',
+      message: 'Nome: ' + nome + ' Idade: ' + idade
     });
 
     return await alerta.present();
+
   }
 
   async closeModal(){
-    this.modalCtrl.dismiss({nome: 'Gabriel', idade: 21});
+    let parametroDeResposta = {nome : 'Fernanda', idade : 32};
+    
+    this.modalCtrl.dismiss(parametroDeResposta);
   }
 
   

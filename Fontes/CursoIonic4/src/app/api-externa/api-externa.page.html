@@ -10,12 +10,14 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-button expand="full" (click)="get()">GET - Receber dados do Servidor</ion-button>
-  <ion-button expand="full" (click)="post()">POST - Enviar dados para Servidor</ion-button>
-  <ion-button expand="full" (click)="put()">PUT - Atualiza dados do Servidor</ion-button>
-  <ion-button expand="full" (click)="delete()">DELETE - Excluir dados do Servidor</ion-button>
-  <ion-button expand="full" (click)="cep()">CEP - Consultar CEP</ion-button>
-
-  <h4>Resposta do servidor</h4>
-  {{result}}
+  <ion-button expand="full" (click)="get()" disabled="true">GET - Receber dados do Servidor</ion-button>
+  <ion-button expand="full" (click)="post()" disabled="true">POST - Enviar dados para Servidor</ion-button>
+  <ion-button expand="full" (click)="put()" disabled="true">PUT - Atualiza dados do Servidor</ion-button>
+  <ion-button expand="full" (click)="delete()" disabled="true">DELETE - Excluir dados do Servidor</ion-button>
+  <ion-item>
+    <ion-label position="floating">Digite o cep</ion-label>
+    <ion-input clearInput type="number" [(ngModel)]="entradaCep"></ion-input>
+  </ion-item>
+  <ion-button expand="block" (click)="cep()">CEP - Consultar CEP</ion-button>
+  <ion-label color="danger"><br><b>{{erro}}</b></ion-label>
 </ion-content>
